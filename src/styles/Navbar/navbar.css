@@ -1,0 +1,35 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    background-color: rgba(128, 128, 128,0.5);
+
+}
+
+.container-fluid .navbar-brand{
+    font-size: 40px;
+    color: #00FFFF;
+    transition: color 1.5s ease-in-out;
+    /* color: #FFD700; */
+}
+
+.container-fluid .navbar-brand:hover{
+    color: #FFD700;
+}
+
+.container-fluid .navbar-nav{
+    gap: 1rem;
+}
+
+.container-fluid .nav-link{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color 0.3s ease;
+}
+
+.container-fluid .nav-link:hover{
+    color: #00FFFF !important;
+}

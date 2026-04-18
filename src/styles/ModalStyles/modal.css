@@ -1,0 +1,39 @@
+.project-modal .modal-content {
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+}
+
+.project-modal .modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.project-modal .btn-close {
+    filter: invert(1);
+}
+
+.project-modal .accordion-item {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: white;
+}
+
+.project-modal .accordion-button {
+    background-color: #262626;
+    color: white;
+}
+
+.project-modal .accordion-button:not(.collapsed) {
+    background-color: #333;
+    color: #0d6efd;
+    box-shadow: none;
+}
+
+.project-modal .accordion-button::after {
+    filter: invert(1);
+}
+
+.project-modal .accordion-body {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
