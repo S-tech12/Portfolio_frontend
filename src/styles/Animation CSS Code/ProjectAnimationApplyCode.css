@@ -60,3 +60,24 @@
     animation: LeftToRight 2s forwards;
     animation-delay: 3s;
 }
+
+#FourthProject {
+    animation: RightToLeft 2s forwards;
+    animation-delay: 2s;
+}
+
+#FourthProject img {
+    animation: DownToUp 2s forwards;
+    animation-delay: 2.2s;
+}
+
+#FourthProject .card-body h5,
+#FourthProject .card-body p {
+    animation: LeftToRight 2s forwards;
+    animation-delay: 2.5s;
+}
+
+#FourthProject #bottomDiv {
+    animation: LeftToRight 2s forwards;
+    animation-delay: 3s;
+}
