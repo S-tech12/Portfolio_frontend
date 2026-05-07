@@ -6,6 +6,7 @@ const ProjectShowcase = () => {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
 
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
@@ -16,13 +17,23 @@ const ProjectShowcase = () => {
   const handleClose3 = () => setShow3(false);
   const handleShow3 = () => setShow3(true);
 
+  const handleClose4 = () => setShow4(false);
+  const handleShow4 = () => setShow4(true);
+
   // Configuration for Live Demo links
   const handleDemoClick = (project) => {
-    // Open deployed project in new tab
-    window.open(
-      "https://task-manager-frontend-nine-snowy.vercel.app/",
-      "_blank"
-    );
+    const urls = {
+      'Human Benchmark': 'https://human-benchmark-frontend.vercel.app/',
+      'College Event System': 'https://new-vgec-event-management-frontend.vercel.app/',
+      'Task Manager': 'https://task-manager-frontend-nine-snowy.vercel.app/'
+    };
+    
+    const url = urls[project];
+    if (url) {
+      window.open(url, "_blank");
+    } else {
+      alert("Live demo coming soon!");
+    }
   };
 
   const modalBodyContent = (title, about, features, techs) => (
@@ -173,6 +184,37 @@ const ProjectShowcase = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Fourth Project: Chatvia */}
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="card" id="FourthProject">
+          <img src="/assets/Project/chatvia.png" className="card-img-top" alt="chatvia pic" />
+          <div className="card-body">
+            <h5 className="card-title">Chatvia</h5>
+            <p className="card-text">A real-time chat application with support for sharing images, videos, docx, and pdf files.</p>
+          </div>
+
+          <div className="card-body" id="bottomDiv">
+            <div className="LiveDemo">
+              <button
+                type="button"
+                className="btn btn-primary"
+                style={{ fontSize: 'smaller' }}
+                onClick={() => handleDemoClick('Chatvia')}
+              >
+                Live Demo <i className="bi bi-arrow-up-right"></i>
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleShow4}
+              >
+                Details <i className="bi bi-arrow-right-short"></i>
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Modals for Project Details */}
@@ -223,14 +265,35 @@ const ProjectShowcase = () => {
           [
             "Task CRUD: Create, read, update, and delete tasks seamlessly.",
             "Priority Sorting: Organize tasks by importance levels.",
-            "Persistent Storage: Data stays safe across sessions.",
-            "Framer Motion: Smooth UI transitions and micro-interactions."
+            "Persistent Storage: Data stays safe across sessions."
           ],
           [
-            { name: "React", icon: "devicon-react-original colored" },
+            { name: "HTML", icon: "devicon-html5-plain colored" },
+            { name: "CSS", icon: "devicon-css3-plain colored" },
+            { name: "JS", icon: "devicon-javascript-plain colored" },
+            { name: "Node.js", icon: "devicon-nodejs-plain colored" }
+          ]
+        )}
+      </Modal>
+
+      <Modal show={show4} onHide={handleClose4} centered size="lg" className="project-modal">
+        {modalBodyContent(
+          "Chatvia",
+          "A comprehensive real-time chat application with support for multimedia messaging including images, videos, docx, and pdf files.",
+          [
+            "Real-time Chat: Instant messaging powered by Socket.io for seamless communication.",
+            "Multimedia Support: Easily share images and videos directly in the chat.",
+            "Document Sharing: Send and receive docx and pdf files effortlessly.",
+            "Database Integration: Reliable data storage and retrieval using Supabase."
+          ],
+          [
+            { name: "HTML", icon: "devicon-html5-plain colored" },
+            { name: "CSS", icon: "devicon-css3-plain colored" },
+            { name: "JS", icon: "devicon-javascript-plain colored" },
             { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-            { name: "CSS3", icon: "devicon-css3-plain colored" },
-            { name: "Framer Motion", icon: "bi bi-play-circle-fill" }
+            { name: "Express", icon: "devicon-express-original colored" },
+            { name: "Supabase", icon: "devicon-supabase-plain colored" },
+            { name: "Socket.io", icon: "devicon-socketio-original colored" }
           ]
         )}
       </Modal>
