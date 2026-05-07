@@ -15,7 +15,7 @@ const About = ({ onShowCertificates, onShowHobbies }) => {
                             <h5 className="card-title" id="namePart1">Hello, I'm</h5>
                             <h5 className="card-title" id="namePart1">Pipalava Smit Raminkbhai.</h5>
                             <p className="card-text" id="namePart2">I am a passionate and dedicated IT student with a strong interest in web development. With hands-on experience in creating dynamic websites and practical knowledge of tools like HTML, CSS, JavaScript, and Node js. My goal is to continuously learn and grow, contributing my skills to impactful projects and innovative teams.</p>
-                            <a href="/assets/1st certificate.pdf" download="1st certificate.pdf" target="_blank" rel="noreferrer" className="btn btn-primary" id="DownloadButton"><i className="bi bi-filetype-pdf"></i> Download CV</a>
+                            <a href="/result.pdf" download="result.pdf" target="_blank" rel="noreferrer" className="btn btn-primary" id="DownloadButton"><i className="bi bi-filetype-pdf"></i> Download Academic Result</a>
                         </div>
                     </motion.div>
                 </div>
