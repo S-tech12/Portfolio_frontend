@@ -18,7 +18,11 @@ const ProjectShowcase = () => {
 
   // Configuration for Live Demo links
   const handleDemoClick = (project) => {
-    alert(`Redirecting to Live Demo for ${project}...`);
+    // Open deployed project in new tab
+    window.open(
+      "https://task-manager-frontend-nine-snowy.vercel.app/",
+      "_blank"
+    );
   };
 
   const modalBodyContent = (title, about, features, techs) => (
@@ -70,7 +74,7 @@ const ProjectShowcase = () => {
         </div>
         <div>
           <p className="text-center">
-            <i className="bi bi-stars"></i> Crafting innovation through code - showcasing expertise in HTML, CSS, JavaScript, and beyond! 
+            <i className="bi bi-stars"></i> Crafting innovation through code - showcasing expertise in HTML, CSS, JavaScript, and beyond!
             <i className="bi bi-stars"></i>
           </p>
         </div>
@@ -87,9 +91,9 @@ const ProjectShowcase = () => {
 
           <div className="card-body" id="bottomDiv">
             <div className="LiveDemo">
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 style={{ fontSize: 'smaller' }}
                 onClick={() => handleDemoClick('Human Benchmark')}
               >
@@ -97,9 +101,9 @@ const ProjectShowcase = () => {
               </button>
             </div>
             <div>
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 onClick={handleShow1}
               >
                 Details <i className="bi bi-arrow-right-short"></i>
@@ -118,9 +122,9 @@ const ProjectShowcase = () => {
 
           <div className="card-body" id="bottomDiv">
             <div className="LiveDemo">
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 style={{ fontSize: 'smaller' }}
                 onClick={() => handleDemoClick('College Event System')}
               >
@@ -128,9 +132,9 @@ const ProjectShowcase = () => {
               </button>
             </div>
             <div>
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 onClick={handleShow2}
               >
                 Details <i className="bi bi-arrow-right-short"></i>
@@ -149,9 +153,9 @@ const ProjectShowcase = () => {
 
           <div className="card-body" id="bottomDiv">
             <div className="LiveDemo">
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 style={{ fontSize: 'smaller' }}
                 onClick={() => handleDemoClick('Task Manager')}
               >
@@ -159,9 +163,9 @@ const ProjectShowcase = () => {
               </button>
             </div>
             <div>
-              <button 
-                type="button" 
-                className="btn btn-primary" 
+              <button
+                type="button"
+                className="btn btn-primary"
                 onClick={handleShow3}
               >
                 Details <i className="bi bi-arrow-right-short"></i>
