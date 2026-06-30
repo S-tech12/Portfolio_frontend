@@ -25,7 +25,8 @@ const ProjectShowcase = () => {
     const urls = {
       'Human Benchmark': 'https://human-benchmark-frontend.vercel.app/',
       'College Event System': 'https://new-vgec-event-management-frontend.vercel.app/',
-      'Task Manager': 'https://task-manager-frontend-nine-snowy.vercel.app/'
+      'Task Manager': 'https://task-manager-frontend-nine-snowy.vercel.app/',
+      'Chatvia' : 'https://chatvia-frontend-phi.vercel.app/'
     };
     
     const url = urls[project];
